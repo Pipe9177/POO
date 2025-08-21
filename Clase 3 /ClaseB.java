@@ -1,21 +1,21 @@
 
 
-public class ClaseA {
+public class ClaseB {
     public static void main(String[] args) {
 
         //Datos del viaje
 
-        double D1 = 42.0,  D2 = 58.5, D3 = 37.2; // Distancia
-        double T1 = 0.9,  T2 = 1.4, T3 = 0.8; // Tiempo
-        double L1 = 5.1,  L2 = 6.9, L3 = 4.3; // Litros
-        double precioLitro = 1.35, largo = 2.0, ancho = 1.2, alto = 1.1; // Metros
-        int masaCargaKg = 1200;
-        double P1 = 2.5, P2 = 3.0,  P3 = 2.0; // Peajes 
-        double deprecPorKm = 0.08, volCamionM3 = 10.0; // Camion
-        double fCO2 = 2.68,  galPorLitro = 0.264172; // kg/L 
+        double D1 = 35.0,  D2 = 72.0, D3 = 53.0; // Distancia
+        double T1 = 0.7,  T2 = 1.6, T3 = 1.1; // Tiempo
+        double L1 = 4.4,  L2 = 9.0, L3 = 6.2; // Litros
+        double precioLitro = 1.42, largo = 2.2, ancho = 1.3, alto = 1.0; // Metros
+        int masaCargaKg = 1450;
+        double P1 = 3.2, P2 = 3.8,  P3 = 2.7; // Peajes 
+        double deprecPorKm = 0.085, volCamionM3 = 12.0; // Camion
+        double fCO2 = 2.64,  galPorLitro = 0.264172; // kg/L 
         int Vmin = 30,  Vmax = 90, Va = 40, Vb = 80; // Velocidades
         double Ca = 0.05, Cb = 0.09; 
-        double a = -0.0008, b = 0.08, c = 4.0;
+        double a = -0.0009, b = 0.09, c = 3.8;
 
         System.out.println("1. Velocidades y Rendimiento:");
 
@@ -27,6 +27,7 @@ public class ClaseA {
         V2 = D2 / T2;
         V2 = Math.round(V2 * 100.0) / 100.0;
         V3 = D3 / T3;
+        V3 = Math.round(V3 * 100.0) / 100.0;
         Vprom = ((D1 * V1)+(D2 * V2)+(D3 * V3))/(D1 + D2 + D3);
         Vprom = Math.round(Vprom * 100.0) / 100.0;
 
@@ -45,7 +46,7 @@ public class ClaseA {
         kml2 = D2 / L2;
         kml2 = Math.round(kml2 * 100.0) / 100.0;
         kml3 = D3 / L3;
-        kml3 = Math.round(kml3 * 100.0) / 100.0;
+        kml3 = Math.round(kml3 * 1000.0) / 1000.0;
         kmlTotal = (D1 + D2 + D3)/(L1 + L2 + L3);
         // Redondear para 3 decimales
         kmlTotal = Math.round(kmlTotal * 1000.0) / 1000.0;
@@ -60,12 +61,13 @@ public class ClaseA {
         double costoComb = 0, deprec = 0, peajes = 0, costoDirecto = 0, costoPorKm = 0;
 
         costoComb = (L1 + L2 + L3) * precioLitro;
-        costoComb = Math.round(costoComb * 100.0) / 100.0;
+        costoComb = Math.round(costoComb * 1000.0) / 1000.0;
         deprec = (D1 + D2 + D3) * deprecPorKm;
-        deprec = Math.round(deprec * 100.0) / 100.0;
+        deprec = Math.round(deprec * 1000.0) / 1000.0;
         peajes = (P1 + P2 + P3);
-        peajes = Math.round(peajes * 100.0) / 100.0;
+        peajes = Math.round(peajes * 1000.0) / 1000.0;
         costoDirecto = (costoComb + deprec + peajes);
+        costoDirecto = Math.round(costoDirecto * 1000.0) / 1000.0;
         costoPorKm = costoDirecto / (D1 + D2 + D3);
         costoPorKm = Math.round(costoPorKm * 1000.0) / 1000.0;
 
@@ -82,7 +84,7 @@ public class ClaseA {
         VolumenM3 = (largo * ancho * alto);
         VolumenM3 = Math.round(VolumenM3 * 1000.0) / 1000.0;
         densidad = masaCargaKg / VolumenM3;
-        densidad = Math.round(densidad * 100.0) / 100.0;
+        densidad = Math.round(densidad * 1000.0) / 1000.0;
         Ocupacion = VolumenM3 / volCamionM3; 
         Ocupacion = Math.round(Ocupacion * 1000.0) / 1000.0;
 
@@ -124,7 +126,8 @@ public class ClaseA {
         ó = Math.sqrt((Math.pow(V1 - Vmedia, 2) + Math.pow(V2 - Vmedia, 2) + Math.pow(V3 - Vmedia, 2)) / 3);
         ó = Math.round(ó * 1000.0) / 1000.0;
         Vpond_t = ((T1 * V1) + (T2 * V2) + (T3 * V3))/(T1 + T2 + T3);
-        
+        Vpond_t = Math.round(Vpond_t * 1000.0) / 1000.0;
+
         System.out.println("Vmedia: " + Vmedia);
         System.out.println("ó: " + ó);
         System.out.println("Vpond_t: " + Vpond_t + "\n");
@@ -134,9 +137,9 @@ public class ClaseA {
         double Cprom = 0, CostoMant = 0;
 
         Cprom = Ca + (Cb - Ca) * ((Vprom - Va) / (Vb - Va)); 
-        Cprom = Math.round(Cprom * 100000.0) / 100000.0;
+        Cprom = Math.round(Cprom * 10000.0) / 10000.0;
         CostoMant = Cprom * (D1 + D2 + D3); 
-        Cprom = Math.round(Cprom * 100.0) / 100.0;
+        Cprom = Math.round(Cprom * 1000.0) / 1000.0;
 
         System.out.println("Cprom: " + Cprom);
         System.out.println("CostoMant: " + CostoMant + "\n");
