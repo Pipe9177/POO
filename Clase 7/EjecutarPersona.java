@@ -1,4 +1,4 @@
-public class EjecutarPersonaGrupo2 {
+public class EjecutarPersona {
     public static void main(String[] args) {
         
         //Creación del objeto
@@ -18,6 +18,7 @@ public class EjecutarPersonaGrupo2 {
                                             65.0);
 
         System.out.println(objPersona2.estudiar("Ingeniería de Sistemas"));
+        System.out.println(objPersona1.estudiar("Arquitectura"));
 
         //Tarea: implementar los metodos get y set en la clase Persona
         //dichos métodos utilizarlos en la clase EjecutarPersonaGrupo2
