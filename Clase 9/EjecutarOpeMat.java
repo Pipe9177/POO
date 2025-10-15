@@ -52,22 +52,22 @@ public class EjecutarOpeMat {
                 System.out.println("La división es: " + objOp.dividir());
                 break;
             case 5:
-                System.out.println("Elevar al cuadrado");
+                System.out.println("Elevar al cuadrado" + objOp.potencia2());
                 break;
             case 6:
-                System.out.println("Elevar al cubo");
+                System.out.println("Elevar al cubo" + objOp.potenciacubo());
                 break;
             case 7:
-                System.out.println("Elevar a la n");
+                System.out.println("Elevar a la n" + objOp.n());
                 break;
             case 8:
-                System.out.println("Raíz cuadrada");
+                System.out.println("Raíz cuadrada" + objOp.raizcuadra());
                 break;
             case 9:
-                System.out.println("Raíz cúbica");
+                System.out.println("Raíz cúbica" + objOp.raizcubic());
                 break;
             case 10:
-                System.out.println("Raíz n");
+                System.out.println("Raíz n" + objOp.raizn());
                 break;
             case 11:
                 System.out.println("Salir");
