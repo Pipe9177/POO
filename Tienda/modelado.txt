@@ -1,0 +1,65 @@
+VERSION B Clase Producto
+
+Atributos
+
+Nombre: codigo
+Tipo de dato: String
+Visibilidad: private
+Descripcion: Identificador del Producto
+
+Nombre: Descripcion
+Tipo de dato: String
+Visibilidad: private
+Descripcion: Nombre del Producto
+
+Nombre: cantidad
+Tipo de dato: int
+Visibilidad: private
+Descripcion: Cantidad disponible del Producto
+
+Nombre: precioUnitario
+Tipo de dato: double
+Visibilidad: private
+Descripcion: Precio de un unidad del producto
+
+Metodos
+
+Nombre: getCodigo()
+Parametros: 
+Retorno: String
+Descripcion: Retorna el codigo del producto
+
+Nombre: getDescripcion()
+Parametros:
+Retorno: String
+Descripcion: retorna la descricion del producto
+
+Nombre: getCantidad()
+Parametros: 
+Retorno: int
+Descripcion: Devuelve la cantidad de unidades disponibles
+
+Nombre: getPrecioUnitario()
+Parametros: 
+Retorno: double
+Descripcion: Retorna el precio unitario actual
+
+Nombre: calcularPrecioTotal
+Parametros: 
+Retorno: cantidad * precioUnitario
+Descripcion: Da el precio total del producto 
+
+Nombre: aplicarDescuento
+Parametros: double porcentaje
+Retorno: void
+Descripcion: Aplica descuento solo en algunos casos
+
+Nombre: incrementarCantidad
+Parametros: int cantidad
+Retorno: void
+Descripcion: Incrementa cantidad de productos especificos
+
+Nombre: toString
+Parametros: 
+Retorno: String
+Descripcion: Devuelve el codigo con toda la info del producto
