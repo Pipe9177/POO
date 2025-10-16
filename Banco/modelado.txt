@@ -1,13 +1,77 @@
+VERSION A - CLASE CuentaBancaria
+
 Atributos
 
-Nombre:
-Tipo de dato:
-Visibilidad:
-Descripcion:
+Nombre: Titular
+Tipo de dato: String
+Visibilidad: Privado
+Descripcion: Utilizando este atributo privado para poder que el Usuario ingrese su nombre
+
+Nombre: numeroCuenta
+Tipo de dato: String
+Visibilidad: Privado
+Descripcion: Almacena el número de cuenta del cliente, que debe tener al menos 6 dígitos.
+
+Nombre: saldo
+Tipo de dato: double
+Visibilidad: Privado
+Descripcion: Representa el dinero disponible en la cuenta bancaria
+
 
 Metodos
 
-Nombre:
-Parametros:
-Retorno:
-Descripcion:
+Nombre: CuentaBancaria()
+Parametros: Ninguno
+Retorno: No retorna (constructor)
+Descripcion: Inicializa los atributos con valores seguros: "No definido", "000000", y 0.0.
+
+Nombre: CuentaBancaria(String titular, String numeroCuenta, double saldo)
+Parametros: titular (String), numeroCuenta (String), saldo (double)
+Retorno: No retorna (Constructor)
+Descripcion: Asigna valores validados a los atributos: el titular no debe ser vacío, el número 
+de cuenta debe tener mínimo 6 caracteres y el saldo no puede ser negativo
+
+Nombre: getTitular()
+Parametros: Ninguno
+Retorno: String
+Descripcion: Devuelve el valor actual del atributo titular.
+
+Nombre: setTitular(String titular)
+Parametros: titular (String)
+Retorno: void
+Descripcion: Asigna un nuevo valor al titular si no es nulo ni vacío.
+
+Nombre: getNumeroCuenta()
+Parametros: Ninguno
+Retorno: String
+Descripcion: Devuelve el número de cuenta actual.
+
+Nombre: setNumeroCuenta(String numeroCuenta)
+Parametros: numeroCuenta (String)
+Retorno: void
+Descripcion: Cambia el número de cuenta si tiene al menos 6 caracteres.
+
+Nombre: getSaldo()
+Parametros: Ninguno
+Retorno: double
+Descripcion: Devuelve el saldo actual disponible.
+
+Nombre: setSaldo(double saldo)
+Parametros: saldo (double)
+Retorno: void
+Descripcion: Permite modificar el saldo, siempre que el nuevo valor no sea negativo.
+
+Nombre: depositar(double monto)
+Parametros: monto (double)
+Retorno: void
+Descripcion: Aumenta el saldo de la cuenta si el monto ingresado es mayor a 0.
+
+Nombre: retirar(double monto)
+Parametros: monto(double)
+Retorno: void
+Descripcion: Disminuye el saldo de la cuenta si el monto es válido y no supera el saldo disponible.
+
+Nombre: toString()
+Parametros: Ninguno
+Retorno: String
+Descripcion: Sobrescribe el método heredado de Object para mostrar los datos de la cuenta (titular, número y saldo) en formato legible.
