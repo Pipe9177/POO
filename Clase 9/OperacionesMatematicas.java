@@ -1,7 +1,7 @@
 public class OperacionesMatematicas{
     
     //Atributos
-    //Sigo sin encontrar mi error en el codigo, ya que no me deja actualizar el repositorio
+    //Pude conseguir encontrar mi error
     private int n1;
     private int n2;
 

@@ -17,5 +17,11 @@ En dado caso de que sean publicos, los demas podrian modificar mis atributos y h
 
 4. ¿Qué función cumplen los getters y setters?
 
-R// 
+R// Los getters y setters permiten leer y modificar atributos privados de una clase, el getters sirve para leer o obtener el valor del 
+atributo que tenga la clase y el setters recibe el tipo de dato para despues modificarlo de forma segura.
+
+5.  Verdadero o falso: “Un método setter no debe validar los datos que recibe.” Justifique
+
+R// Es falso; ya que un setter deberia poder validar para evitar estados invalidos que causen error despues.
+Tambien el setter permite dectectar errores en donde se ingreso datos no permitidos.  
 

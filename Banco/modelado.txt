@@ -1,0 +1,13 @@
+Atributos
+
+Nombre:
+Tipo de dato:
+Visibilidad:
+Descripcion:
+
+Metodos
+
+Nombre:
+Parametros:
+Retorno:
+Descripcion:
