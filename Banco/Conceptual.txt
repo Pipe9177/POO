@@ -1,5 +1,4 @@
-1. ¿Que es la encapsulacion y por que es importante
-    en la programacion orientada a objetos?
+1. ¿Que es la encapsulacion y por que es importante en la programacion orientada a objetos?
 
 R// La encapsulacion es una agrupacion de dos datos, los cuales serian los atributos y los metodos en una sola 
 clase; tambien sirve para que simplemente muestre los metodos y no los atributos de la clase.
@@ -7,8 +6,8 @@ clase; tambien sirve para que simplemente muestre los metodos y no los atributos
 2. ¿Qué diferencia hay entre un método y un constructor?
 
 R// La diferencia que hay entre estos dos es que los metodos son funciones que permiten llamarlo muchas veces,
-mientras que los constructores nos permite inicializar la clase; juntamente no tiene retorno, ademas de que tiene el nombre 
-de la clase.
+mientras que los constructores nos permite inicializar la clase; juntamente no tiene retorno, ademas de que tiene el 
+nombre de la clase.
 
 3. ¿Por qué los atributos deben ser privados y no públicos?
 
@@ -17,11 +16,29 @@ En dado caso de que sean publicos, los demas podrian modificar mis atributos y h
 
 4. ¿Qué función cumplen los getters y setters?
 
-R// Los getters y setters permiten leer y modificar atributos privados de una clase, el getters sirve para leer o obtener el valor del 
-atributo que tenga la clase y el setters recibe el tipo de dato para despues modificarlo de forma segura.
+R// Los getters y setters permiten leer y modificar atributos privados de una clase, el getters sirve para leer o obtener 
+el valor del atributo que tenga la clase y el setters recibe el tipo de dato para despues modificarlo de forma segura.
 
 5.  Verdadero o falso: “Un método setter no debe validar los datos que recibe.” Justifique
 
 R// Es falso; ya que un setter deberia poder validar para evitar estados invalidos que causen error despues.
 Tambien el setter permite dectectar errores en donde se ingreso datos no permitidos.  
 
+
+CLASE A CuentaBancaria 
+
+1. ¿Por qué el atributo saldo debe ser privado?
+
+R// El atributo saldo debe ser privado; por que sino, si fuera publico cualquiera lo podria editar, algunos se podrian 
+poner mas saldo del debido o quitarles a otros.
+
+2. ¿Qué ocurriría si se intenta depositar un valor negativo?
+
+R//Al intentar depositar un valor negativo, el programa de una marca "Error, el valor a depositar tiene que ser positivo"
+
+3. Modifique en vivo el código para permitir un sobregiro máximo de -50 y explique el cambio
+
+R// Sinceramente profesor, en este punto quede perdido en lo que se tenia que cumplir
+
+
+CLASE B 
