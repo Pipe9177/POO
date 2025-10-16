@@ -1,0 +1,21 @@
+1. ¿Que es la encapsulacion y por que es importante
+    en la programacion orientada a objetos?
+
+R// La encapsulacion es una agrupacion de dos datos, los cuales serian los atributos y los metodos en una sola 
+clase; tambien sirve para que simplemente muestre los metodos y no los atributos de la clase.
+
+2. ¿Qué diferencia hay entre un método y un constructor?
+
+R// La diferencia que hay entre estos dos es que los metodos son funciones que permiten llamarlo muchas veces,
+mientras que los constructores nos permite inicializar la clase; juntamente no tiene retorno, ademas de que tiene el nombre 
+de la clase.
+
+3. ¿Por qué los atributos deben ser privados y no públicos?
+
+R// Los atributos siempre deben ser privados para que los demas no puedan modificar el codigo que yo escribi;
+En dado caso de que sean publicos, los demas podrian modificar mis atributos y hechar a perder el codigo.
+
+4. ¿Qué función cumplen los getters y setters?
+
+R// 
+
