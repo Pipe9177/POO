@@ -41,4 +41,18 @@ R//Al intentar depositar un valor negativo, el programa de una marca "Error, el 
 R// Sinceramente profesor, en este punto quede perdido en lo que se tenia que cumplir
 
 
-CLASE B 
+CLASE B Clase Producto 
+
+1. ¿Por qué se valida el porcentaje del descuento?
+
+R// Se valida el porcentaje del descuento para asegurarse de que esté en un rango lógico (entre 0 y 50) y 
+evitar que el producto tenga un precio erróneo o negativo.
+
+2. ¿Qué sucede si el precio unitario es negativo?
+
+R// Si el precio unitario es negativo, el programa lo bloquea, evitando errores de cálculo en el subtotal o precios 
+ilógicos.
+
+3. Agregue en vivo un impuesto del 8 % y explique cómo afecta al total
+
+R// Aumenta el subtotal en un 8%, elevando el precio total a pagar.
