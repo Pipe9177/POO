@@ -18,12 +18,6 @@ public class Dron extends VehiAereo {
     }
 
     @Override
-    public void aterrizar() {
-        super.aterrizar(); // Llama al método aterrizar de la clase padre
-        System.out.println("El dron ha aterrizado. Nivel de batería restante: " + bateria + "%.");
-    }
-
-    @Override
     public void mostrarInfo() {
         super.mostrarInfo(); // Llama al método mostrarInfo de la clase padre
         System.out.println("El dron tiene un nivel de batería del " + bateria + "%.");

@@ -14,11 +14,6 @@ public class Avion extends VehiAereo {
     }
 
     @Override
-    public void aterrizar() {
-        super.aterrizar(); // Llama al método aterrizar de la clase padre
-        System.out.println("El avión con capacidad para " + capPasajeros + " pasajeros ha aterrizado.");
-    }
-    @Override
     public void mostrarInfo() {
         super.mostrarInfo(); // Llama al método mostrarInfo de la clase padre
         System.out.println("El avión tiene una capacidad para " + capPasajeros + " pasajeros.");

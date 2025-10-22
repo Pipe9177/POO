@@ -19,13 +19,7 @@ public class VehiAereo {
         vuelo = true;  // Cambia el estado a volando
         System.out.println("El vehículo aéreo " + modelo + " está despegando y lleva una velocidad de " + velocidad + " km/h.");
     }
-
-    public void aterrizar() {
-        velocidad = 0;  // La velocidad se reduce a 0 al aterrizar
-        vuelo = false;  // Cambia el estado a no volando
-        System.out.println("El vehículo aéreo " + modelo + " ha aterrizado.");
-    }
-
+    
     public void mostrarInfo() {
         String estadoVuelo = vuelo ? "volando" : "en tierra"; // Determina el estado de vuelo
         System.out.println("El vehículo aéreo " + modelo + " está " + estadoVuelo + " a una velocidad de " + velocidad + " km/h.");

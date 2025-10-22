@@ -14,12 +14,6 @@ public class Helicoptero extends VehiAereo {
     }
 
     @Override
-    public void aterrizar() {
-        super.aterrizar(); // Llama al método aterrizar de la clase padre
-        System.out.println("El helicóptero con " + numHelices + " hélices ha aterrizado.");
-    }
-
-    @Override
     public void mostrarInfo() {
         super.mostrarInfo(); // Llama al método mostrarInfo de la clase padre
         System.out.println("El helicóptero tiene " + numHelices + " hélices.");
