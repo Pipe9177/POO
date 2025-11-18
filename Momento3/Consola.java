@@ -5,12 +5,34 @@ public class Consola {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in); // Crea un objeto Scanner para leer entradas
-        Ascensor ascensor = new Ascensor(new Puerta(null)); // Crea una instancia del ascensor con una puerta asociada
+        Controlador controlador = new Controlador(); // Crea una instancia del controlador
+        Ascensor ascensor = new Ascensor(controlador); // Recibe el controlador en el constructor del ascensor
 
-        System.out.println("Recibiendo solicitudes de ascensor...");
+        //Organiza las solicitudes generadas por los usuarios
+
+        //Este metodo sirve para llamar al ascensor desde un piso aleatorio, que se diriga alla y despues muestre
+        //la interfaz de consola para que el usuario pueda interactuar con el ascensor por dentro
+
+        
+        //en caso de que haya una solicitud, el controlador la procesa y le indica al ascensor a qué piso moverse
+        System.out.println("\nRecibiendo solicitudes de ascensor...");
+
+        int pisoA = (int)(Math.random() * 11); // Genera un piso aleatorio entre 0 y 10
+        int pisoB = (int)(Math.random() * 11); // Genera otro piso aleatorio entre 0 y 10
+
+        Solicitud pA = new Solicitud(pisoA); // Crea una solicitud para el primer piso
+
+        Solicitud pB = new Solicitud(pisoB); // Crea una solicitud para el segundo piso
 
 
 
+        controlador.agregarSolicitud(pA); // Agrega la primera solicitud al controlador
+        controlador.agregarSolicitud(pB); // Agrega la segunda solicitud al controlador
+
+        controlador.procesar(ascensor); // Procesa las solicitudes y mueve el ascensor en consecuencia
+
+
+    ascensor.iniciarInterfaz(); // Inicia la interfaz del ascensor
             while(true){
             System.out.println("\n------CONSOLA ASCENSOR------");
             System.out.println("Piso actual:" + ascensor.getPisoActual()); // Muestra el piso actual del ascensor
@@ -31,7 +53,7 @@ public class Consola {
                         System.out.println("Número de piso inválido.");
                     } else {
                         System.out.println("Presionando botón de piso " + piso + "...");
-                        ascensor.registrarSolicitud(piso); // Registra la solicitud del piso
+                        ascensor.moverAPiso(piso); // Mueve el ascensor al piso seleccionado
                        ascensor.mover(); // Llama al motor para procesar la solicitud
                     }
                     break;

@@ -3,24 +3,30 @@
 
 public class Solicitud {
     private int piso; // piso al que se desea ir
-    private boolean abrirPuerta; // indica si se debe abrir la puerta al llegar
 
-    public Solicitud(int piso, boolean abrirPuerta) {
+
+    public Solicitud(int piso) {
         this.piso = piso;
-        this.abrirPuerta = abrirPuerta;
+
     }
 
     public int getPiso() {
         return piso;
     }
 
-    public boolean isAbrirPuerta() { // getter para abrirPuerta si esta en true
-        return abrirPuerta;
+    public String direccion(int pisoActual) {
+        if(pisoActual < piso) {
+            return "Subiendo";
+        } else if (pisoActual > piso) {
+            return "Bajando";
+        } else {
+            return "En el mismo piso";
+        }
     }
 
     @Override
     public String toString() {
-        return "Solicitud:" + "piso =" + piso + ", abrirPuerta =" + abrirPuerta;
+        return "Solicitud:" + "piso =" + piso;
 
     }
 }
