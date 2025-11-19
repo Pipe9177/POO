@@ -17,7 +17,8 @@ public abstract class Boton {
         return presionado;
     }
 
-    public abstract void presionar(Ascensor Ascensor); // método abstracto para presionar el botón en los diferentes tipos de botones
+    public abstract void presionar(Ascensor Ascensor); // método abstracto para presionar el botón en los diferentes 
+    //tipos de botones creados dentro y fuera del ascensor
 
     public void resetear() {
         this.presionado = false; // método para resetear el estado del botón a no presionado

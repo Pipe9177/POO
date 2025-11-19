@@ -14,7 +14,8 @@ public class Solicitud {
         return piso;
     }
 
-    public String direccion(int pisoActual) {
+    //muestra en pantalla la direccion en la cual se esta dirigiendo el ascensor
+    public String direccion(int pisoActual) { 
         if(pisoActual < piso) {
             return "Subiendo";
         } else if (pisoActual > piso) {

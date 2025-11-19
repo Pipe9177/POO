@@ -10,7 +10,7 @@ public class Ascensor {
     private static final int PISO_MAXIMO = 10; // Definición del piso máximo
     private Queue<Solicitud> cola; // Cola para almacenar las solicitudes de pisos
     private boolean emergencia; // Estado de emergencia del ascensor
-    private Controlador controlador;
+    private Controlador controlador; // Define el estado del ascensor, si esta subiendo o descendiendo
 
     public Ascensor(Controlador controlador) {
         this.pisoActual = 0; // Inicializa el ascensor en el piso 0
@@ -28,7 +28,7 @@ public class Ascensor {
         System.out.println("Emergencia activada. El ascensor se detendrá.");
     }
 
-    public void moverAPiso(int piso) {
+    public void moverAPiso(int piso) { // Ascensor dirigiendose a piso aleatorio en el cual lo solicitaron
         System.out.println("\n Ascensor dirigiendose al piso: " + piso);
         if (piso > pisoActual) {
             while (pisoActual < piso) {
@@ -51,16 +51,11 @@ public class Ascensor {
                 }
             }
         } else {
-            System.out.println("El ascensor ya está en el piso " + piso);
+            System.out.println("El ascensor ya está en el piso " + piso); //En caso tal de que el ascensor se encuentre
+            //en el piso aleatorio
 
         }
         mover();
-    }
-
-    public void mostrarEstado() {
-        System.out.println("Piso actual: " + pisoActual);
-        System.out.println("Estado de la puerta: " + (puerta.isAbierta() ? "Abierta" : "Cerrada"));
-        System.out.println("Estado de emergencia: " + (emergencia ? "Activada" : "Desactivada"));
     }
 
     public void motor() { // Método para controlar el movimiento del ascensor
@@ -75,18 +70,16 @@ public class Ascensor {
         }
     }
 
-    public void mover() {
+    public void mover() { //"Interfaz" el cual procesa la solicitud del piso dentro del ascensor
         if (cola.isEmpty()) {
         } else {
             Solicitud objetivo = cola.peek(); // Obtiene la siguiente solicitud sin eliminarla
             int pisoDestino = objetivo.getPiso(); // Obtiene el piso destino de la solicitud
             while (pisoActual != pisoDestino) {
                 if (pisoActual < pisoDestino) {
-                    pisoActual++;
-                    System.out.println("Ascendiendo...");
+                    pisoActual++; //Muestra en pantalla el ascenso hasta llegar al piso solicitado
                 } else if (pisoActual > pisoDestino) {
-                    System.out.println("Descendiendo...");
-                    pisoActual--;
+                    pisoActual--; //Muestra en pantalla el descenso hasta llegar al piso solicitado
                 }
                 System.out.println("Ascensor en el piso: " + pisoActual);
                 if (pisoActual == pisoDestino) {
@@ -107,7 +100,7 @@ public class Ascensor {
         return puerta;
     }
 
-    public void iniciarInterfaz() {
+    public void iniciarInterfaz() { //La consola del ascensor llama a la interfaz para inicializar el programa
         System.out.println("Interfaz de ascensor iniciada.");
     }
 
