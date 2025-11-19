@@ -8,9 +8,9 @@ public class Notificaciones {
         System.out.println("Notificación: La puerta del ascensor está cerrada en el piso " + piso + ".");
     }
 
-    public void notificarMovimientoAscensor(int pisoOrigen, int pisoDestino) { 
+    public void notificarMovimientoAscensor(int pisoActual, int pisoDestino) { 
         // Notifica que el ascensor se está moviendo entre dos pisos
-        System.out.println("Notificación: El ascensor se está moviendo del piso " + pisoOrigen + " al piso " + pisoDestino + ".");
+        System.out.println("Notificación: El ascensor se está moviendo del piso " + pisoActual + " al piso " + pisoDestino + ".");
     }
 
     public void notificarObstaculoDetectado(int piso) { 
