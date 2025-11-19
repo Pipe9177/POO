@@ -1,0 +1,12 @@
+Para el problema planteado del ascensor es importante tener en cuenta varios aspectos, los cuales mencionare en orden:
+
+1. Primeramente el numero de pisos del "edificio" son fijos y no se permiten al usuario modificarlos, en caso tal de que
+el usuario solicite un piso mayor o menor al estipulado; saldra error y permitira volver a escoger
+
+2. Al inicio de la consola, el ascensor se dirigira a dos lugares aleatorios dentro del piso, en los cuales despues de
+llegar y hacer su ciclo, saltara la interfaz dentro del ascensor. Teniendo en cuenta como si un usuario entrace y pudiera
+escoger a que piso ir. Ej:
+                            - Ascensor inicia en el piso 0 pero recibe la solicitud del piso 6, se dirige al piso 6; 
+                            mientras esta dirigiendose recibe otra solicitud del piso 9, recoge a ambos y salta la 
+                            interfaz del ascensor, el cual el usuario del piso 6 podria escoger ir al piso 0, o mantener
+                            la puerta abierta, estado de emergencia o cerrar la puerta.
